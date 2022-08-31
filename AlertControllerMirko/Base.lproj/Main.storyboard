@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3qJ-oh-ne6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2qH-tf-G9u">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1766" y="-76"/>
+            <point key="canvasLocation" x="-1886" y="-170"/>
         </scene>
         <!--Alert View Controller-->
         <scene sceneID="zfG-s1-g5Y">
@@ -182,17 +182,103 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6h7-rn-6HW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-950.46728971962614" y="-76.45788336933046"/>
+            <point key="canvasLocation" x="-1227" y="-170"/>
+        </scene>
+        <!--Alarm Counter View Controller-->
+        <scene sceneID="NSd-U0-uSB">
+            <objects>
+                <viewController id="2qH-tf-G9u" customClass="AlarmCounterViewController" customModule="AlertControllerMirko" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fjG-Nh-Jgp">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sekunden" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LX-vy-aIs">
+                                <rect key="frame" x="80" y="289" width="119" height="39"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="119" id="3Lw-tb-QG3"/>
+                                    <constraint firstAttribute="height" constant="39" id="c4g-04-CO4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="25"/>
+                                <color key="textColor" systemColor="separatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAt-JZ-Fdn">
+                                <rect key="frame" x="232" y="293" width="109" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="C5T-Gu-biu"/>
+                                    <constraint firstAttribute="height" constant="29" id="YAh-T5-E1h"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Start">
+                                    <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startBTN:" destination="2qH-tf-G9u" eventType="touchUpInside" id="5j7-lM-9U8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="depositphotos_192471970-stock-illustration-broken-alarm-clock-and-deadline" translatesAutoresizingMaskIntoConstraints="NO" id="Xtk-tF-7iY">
+                                <rect key="frame" x="49" y="367" width="190" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="112-7j-6MP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJG-YT-lvP">
+                                <rect key="frame" x="257" y="398" width="72" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="2NX-we-T2w"/>
+                                    <constraint firstAttribute="height" constant="95" id="sKk-rg-afo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.82460564374923706" green="0.98474627733230591" blue="0.019112817943096161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xa4-jW-WDJ"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstItem="3LX-vy-aIs" firstAttribute="leading" secondItem="Xa4-jW-WDJ" secondAttribute="leading" constant="80" id="ACD-3i-R2P"/>
+                            <constraint firstItem="MAt-JZ-Fdn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3LX-vy-aIs" secondAttribute="trailing" constant="8" symbolic="YES" id="Hhr-6C-gtT"/>
+                            <constraint firstItem="mJG-YT-lvP" firstAttribute="top" secondItem="MAt-JZ-Fdn" secondAttribute="bottom" constant="76" id="Ldn-31-HtD"/>
+                            <constraint firstItem="Xtk-tF-7iY" firstAttribute="top" secondItem="3LX-vy-aIs" secondAttribute="bottom" constant="39" id="Q7e-OO-Jkb"/>
+                            <constraint firstItem="Xa4-jW-WDJ" firstAttribute="bottom" secondItem="Xtk-tF-7iY" secondAttribute="bottom" constant="366" id="RwF-KE-cun"/>
+                            <constraint firstItem="3LX-vy-aIs" firstAttribute="top" secondItem="Xa4-jW-WDJ" secondAttribute="top" constant="245" id="T9q-oR-lBx"/>
+                            <constraint firstItem="MAt-JZ-Fdn" firstAttribute="top" secondItem="Xa4-jW-WDJ" secondAttribute="top" constant="249" id="TCm-l7-282"/>
+                            <constraint firstItem="Xa4-jW-WDJ" firstAttribute="trailing" secondItem="MAt-JZ-Fdn" secondAttribute="trailing" constant="87" id="Z2I-Ed-ZLG"/>
+                            <constraint firstItem="Xtk-tF-7iY" firstAttribute="leading" secondItem="Xa4-jW-WDJ" secondAttribute="leading" constant="49" id="jXr-gT-8T7"/>
+                            <constraint firstItem="Xa4-jW-WDJ" firstAttribute="trailing" secondItem="mJG-YT-lvP" secondAttribute="trailing" constant="99" id="oiY-UD-fmi"/>
+                            <constraint firstItem="mJG-YT-lvP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xtk-tF-7iY" secondAttribute="trailing" constant="8" symbolic="YES" id="tsd-8F-YU7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alarmLabel" destination="3LX-vy-aIs" id="zss-V8-Saj"/>
+                        <outlet property="counterLabel" destination="mJG-YT-lvP" id="nDs-PV-bxE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICo-aG-vnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-496.26168224299062" y="-87.473002159827217"/>
         </scene>
     </scenes>
     <resources>
+        <image name="depositphotos_192471970-stock-illustration-broken-alarm-clock-and-deadline" width="1600" height="1700"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
