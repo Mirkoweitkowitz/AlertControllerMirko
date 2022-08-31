@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3qJ-oh-ne6">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -113,15 +114,88 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1284" y="-42"/>
+            <point key="canvasLocation" x="-1766" y="-76"/>
+        </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="zfG-s1-g5Y">
+            <objects>
+                <viewController id="3qJ-oh-ne6" customClass="AlertViewController" customModule="AlertControllerMirko" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ii1-U9-EfR">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Kotlin " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gm2-fh-lLT">
+                                <rect key="frame" x="20" y="120.00000000000001" width="388" height="34.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="388" id="08U-Ol-etx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="29"/>
+                                <color key="textColor" red="0.94309514760971069" green="0.02027617022395134" blue="0.97589224576950073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUd-5y-8Kx">
+                                <rect key="frame" x="72" y="340.66666666666669" width="278" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="oPo-XU-e2t"/>
+                                    <constraint firstAttribute="height" constant="31" id="zkn-mS-O0e"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="filled" title="Sprache hinzufügen" imagePadding="6" cornerStyle="dynamic">
+                                    <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addBTN:" destination="3qJ-oh-ne6" eventType="touchUpInside" id="BeG-Ff-GFU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3t-jQ-qKp">
+                                <rect key="frame" x="101" y="511" width="226" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="JD3-VY-scb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Leeren" imagePadding="8" cornerStyle="dynamic">
+                                    <imageReference key="image" image="trash.fill" catalog="system" symbolScale="large"/>
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="trashBTN:" destination="3qJ-oh-ne6" eventType="touchUpInside" id="IXf-Qm-p0M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IgL-05-k8Y"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IgL-05-k8Y" firstAttribute="bottom" secondItem="A3t-jQ-qKp" secondAttribute="bottom" constant="336" id="AxA-Fe-le0"/>
+                            <constraint firstItem="A3t-jQ-qKp" firstAttribute="centerX" secondItem="Gm2-fh-lLT" secondAttribute="centerX" id="E82-m9-FaN"/>
+                            <constraint firstItem="fUd-5y-8Kx" firstAttribute="leading" secondItem="IgL-05-k8Y" secondAttribute="leading" constant="72" id="fMl-wX-cFE"/>
+                            <constraint firstItem="Gm2-fh-lLT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IgL-05-k8Y" secondAttribute="leading" id="jzt-Ng-fg2"/>
+                            <constraint firstItem="A3t-jQ-qKp" firstAttribute="leading" secondItem="IgL-05-k8Y" secondAttribute="leading" constant="101" id="l91-6L-y8V"/>
+                            <constraint firstItem="fUd-5y-8Kx" firstAttribute="top" secondItem="Gm2-fh-lLT" secondAttribute="bottom" constant="186" id="t3z-Es-BI5"/>
+                            <constraint firstItem="IgL-05-k8Y" firstAttribute="trailing" secondItem="Gm2-fh-lLT" secondAttribute="trailing" constant="20" id="w3m-ko-WPd"/>
+                            <constraint firstItem="Gm2-fh-lLT" firstAttribute="top" secondItem="IgL-05-k8Y" secondAttribute="top" constant="76" id="ymu-XE-o27"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputLabel" destination="Gm2-fh-lLT" id="Cc3-NQ-fhB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6h7-rn-6HW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-950.46728971962614" y="-76.45788336933046"/>
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
